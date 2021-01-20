@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Company Name</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/grid.css"/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/contact.js"></script>
+		<script
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArAadyWAlxEu1LKzx4bBwQPTszrlIAJGw&sensor=false">
+		</script>
+
+		<script>
+			function initialize()
+			{
+				var mapProp = {
+					center:new google.maps.LatLng(51.508742,-0.120850),
+					zoom:5,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">LOGO</a>
+					<nav id="nav">
+<!--						<a href="index.html">Home</a>-->
+<!--						<a href="generic.html">Generic</a>-->
+						<a href="#contact">Contact</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h1>Company Name</h1>
+				<p>Description .....</p>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper special">
+				<div class="inner">
+					<header>
+						<h2>Our Service</h2>
+					</header>
+					<div class="flex flex-3">
+						<article>
+							<header>
+								<h3>Service 1</h3>
+								<img class="servicePhoto" src="images/construction-1.png">
+							</header>
+							<p>A short description.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+						<article>
+							<header>
+								<h3>Service 2</h3>
+								<img class="servicePhoto" src="images/construction-2.png">
+							</header>
+							<p>A short description.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+						<article>
+							<header>
+								<h3>Service 3</h3>
+								<img class="servicePhoto" src="images/construction-3.png">
+							</header>
+							<p>A short description.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style1 special">
+				<div class="inner">
+					<header>
+						<h2>Meet the Team</h2>
+					</header>
+					<div class="flex flex-4">
+						<div class="box person">
+							<div class="image round">
+								<img src="images/pic03.jpg" alt="name1" />
+							</div>
+							<h3>name1</h3>
+							<p>title1</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/.jpg" alt="name2" />
+							</div>
+							<h3>name2</h3>
+							<p>title2</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/.jpg" alt="name3" />
+							</div>
+							<h3>name3</h3>
+							<p>title3</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper special">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Photos</h2>
+					</header>
+					<div class="flex flex-3">
+						<div class="row1">
+							<div class="column1">
+								<img class="zoom" src="images/construction-1.png">
+								<img class="zoom" src="images/construction-2.png">
+								<img class="zoom" src="images/banner.jpg">
+							</div>
+							<div class="column1">
+								<img class="zoom" src="images/banner.jpg">
+								<img class="zoom" src="images/construction-3.png">
+								<img class="zoom" src="images/construction-1.png">
+							</div>
+							<div class="column1">
+								<img class="zoom" src="images/pic03.jpg">
+								<img class="zoom" src="images/banner.jpg">
+								<img class="zoom" src="images/pic03.jpg">
+							</div>
+							<div class="column1">
+								<img class="zoom" src="images/construction-2.png">
+								<img class="zoom" src="images/pic03.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		<section id="contact" class="wrapper style1 special">
+			<div class="inner">
+				<header class="align-center">
+					<h2>Contact Us</h2>
+				</header>
+				<div class="flex flex-2">
+					<article>
+						<header class="align-center">
+							<h3>Call us at <a class="form-a" href="tel:123456789">123-456-789</a></h3>
+
+						</header>
+						<div>
+							<label class="location">We are located at: 123 Street, City,
+								State 45678</label>
+						</div>
+						<div class="googleMap" id="googleMap" style="width:500px;height:380px;"></div>
+
+					</article>
+					<article>
+						<header class="align-center">
+							<h3>Leave us a message !</h3>
+						</header>
+						<form id="contact-form">
+							<div class="form__group">
+								<input type="text" class="form-control" id='user_name' name="user_name" placeholder=""  required>
+								<label class="form-label" id="nameLabel" for="user_name">Name</label>
+							</div>
+							<div class="form__group">
+								<input type="text" class="form-control" id="user_email" name="user_email" placeholder="" required>
+								<label class="form-label" id="emailLabel" for="user_email">Your Email</label>
+							</div>
+
+							<div class="form__group">
+								<input type="tel" class="form-control" id="mobile" name="mobile" placeholder="" required>
+								<label class="form-label" id="mobileLabel" for="mobile">Your Mobile No. </label>
+							</div>
+							<div class="form__group">
+								<input type="text" class="form-control" id="subject" name="subject" placeholder="" required>
+								<label class="form-label" id="subjectLabel" for="subject">Inquiry</label>
+							</div>
+						<div class="form__group">
+							<textarea rows="6" cols="60" name="message" class="form-control" id="message" placeholder="" required></textarea>
+							<label class="form-label" id="messageLabel" for="message">Tell us 	 more about your needs</label>
+						</div>
+
+						<div class=" float-right">
+							<button type="submit" id="btnFetch" class="spinner-button btn btn-primary mb-2">Submit</button>
+							<a id="mailTo"></a>
+						</div>
+
+						</form><!-- End form -->
+					</article>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<div class="flex">
+					<div class="copyright">
+						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+					</div>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
